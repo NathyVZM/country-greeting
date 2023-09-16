@@ -1,21 +1,16 @@
 <?php
-// Country.php
+class Country {
+    public function __construct(
+        private $name,
+        private $timezone
+    ) {}
 
-class Pais {
-    private $nombre;
-    private $zonaHoraria;
-
-    public function __construct($nombre, $zonaHoraria) {
-        $this->nombre = $nombre;
-        $this->zonaHoraria = $zonaHoraria;
+    public function getName() {
+        return $this->name;
     }
 
-    public function getNombre() {
-        return $this->nombre;
-    }
-
-    public function getZonaHoraria() {
-        return $this->zonaHoraria;
+    public function getTimezone() {
+        return $this->timezone;
     }
 }
 ?>

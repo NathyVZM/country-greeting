@@ -1,21 +1,17 @@
 <?php
-// Greeting.php
+class Greeting {
+    public function __construct(
+        private $message,
+        private $localTime
+    ) {}
 
-class Saludo {
-    private $mensaje;
-    private $horaLocal;
-
-    public function __construct($mensaje, $horaLocal) {
-        $this->mensaje = $mensaje;
-        $this->horaLocal = $horaLocal;
+    public function getMessage() {
+        return $this->message;
     }
 
-    public function obtenerMensaje() {
-        return $this->mensaje;
-    }
-
-    public function obtenerHoraLocal() {
-        return $this->horaLocal->format('h:i A');
+    public function getLocaltime() {
+        return $this->localTime->format('h:i A');
     }
 }
 ?>
+
